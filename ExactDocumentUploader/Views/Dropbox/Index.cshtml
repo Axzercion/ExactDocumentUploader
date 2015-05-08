@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Dropbox</h2>
+
+@if (ViewBag.NewFilesCount > 0)
+{
+    @: There are one or more new documents. Please click on the next link to store these documents in Exact Online: <br /><br />
+
+    @Html.ActionLink("Authenticate with Exact Online", "Index", "Exact")
+}
+else
+{
+   @: There are no new documents. Please re-run this application after new documents are added.
+}
